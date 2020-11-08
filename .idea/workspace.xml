@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cd7ef32a-d944-4830-97e7-2b1cfef47a1d" name="Default Changelist" comment="" />
+    <list default="true" id="cd7ef32a-d944-4830-97e7-2b1cfef47a1d" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -12,6 +15,14 @@
     <execution>
       <executable />
     </execution>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -120,6 +131,7 @@
     </include_path>
   </component>
   <component name="ProjectId" id="1juZC9HlgIkpJipHkBZ5CEgQdoK" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="autoscrollFromSource" value="true" />
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -173,6 +185,7 @@
       <workItem from="1604693803269" duration="413000" />
       <workItem from="1604828058569" duration="1620000" />
       <workItem from="1604829868615" duration="960000" />
+      <workItem from="1604843778598" duration="602000" />
     </task>
     <servers />
   </component>
@@ -188,6 +201,10 @@
       <screen x="0" y="0" width="1440" height="855" />
     </state>
     <state x="386" y="207" width="667" height="486" key="find.popup/0.0.1440.855@0.0.1440.855" timestamp="1604829199781" />
+    <state x="473" y="305" key="git4idea.ui.GitUnstashDialog" timestamp="1604843314605">
+      <screen x="0" y="0" width="1440" height="854" />
+    </state>
+    <state x="473" y="305" key="git4idea.ui.GitUnstashDialog/0.0.1440.854@0.0.1440.854" timestamp="1604843314605" />
     <state width="600" height="424" key="javadoc.popup" timestamp="1604671122059">
       <screen x="0" y="0" width="1440" height="855" />
     </state>
