@@ -1982,10 +1982,14 @@ __webpack_require__.r(__webpack_exports__);
         }
       });
     },
-    deleteCategory: function deleteCategory(id) {
+    deleteCategory: function deleteCategory(id, index) {
       var _this2 = this;
 
-      this.$store.dispatch('deleteCategory', id).then(function (response) {
+      var data = {
+        id: id,
+        index: index
+      };
+      this.$store.dispatch('deleteCategory', data).then(function (response) {
         _this2.$store.dispatch('getAllCategory');
       })["catch"](function (error) {
         if (error.response.status === 422) {
@@ -2043,7 +2047,6 @@ __webpack_require__.r(__webpack_exports__);
     createCategory: function createCategory() {
       var _this = this;
 
-      console.log(this.form);
       this.$store.dispatch('addCategory', this.form).then(function (response) {
         _this.$router.push({
           name: 'category.index'
@@ -37698,7 +37701,7 @@ var render = function() {
                     [
                       _vm._m(0),
                       _vm._v(" "),
-                      _vm._l(_vm.categories, function(category) {
+                      _vm._l(_vm.categories, function(category, index) {
                         return _c("div", { staticClass: "track" }, [
                           _c("div", { staticClass: "track__number" }, [
                             _vm._v(_vm._s(category.id))
@@ -37813,7 +37816,10 @@ var render = function() {
                                 on: {
                                   click: function($event) {
                                     $event.preventDefault()
-                                    return _vm.deleteCategory(category.id)
+                                    return _vm.deleteCategory(
+                                      category.id,
+                                      index
+                                    )
                                   }
                                 }
                               },
@@ -55173,6 +55179,7 @@ __webpack_require__.r(__webpack_exports__);
       axios.post("/my_projects/ToDoApp/public/api/category", data);
     },
     getAllCategory: function getAllCategory(context) {
+      console.log('getALlCategory');
       axios.get("/my_projects/ToDoApp/public/api/category").then(function (response) {
         context.commit('categories', response.data.data);
       });
@@ -55181,14 +55188,19 @@ __webpack_require__.r(__webpack_exports__);
       var commit = _ref2.commit;
       axios.put("/my_projects/ToDoApp/public/api/category/".concat(data.id), data);
     },
-    deleteCategory: function deleteCategory(_ref3, id) {
+    deleteCategory: function deleteCategory(_ref3, data) {
       var commit = _ref3.commit;
-      axios["delete"]("/my_projects/ToDoApp/public/api/category/".concat(id));
+      axios["delete"]("/my_projects/ToDoApp/public/api/category/".concat(data.id)).then(function () {
+        commit('categoriesDelete', data.index);
+      });
     }
   },
   mutations: {
     categories: function categories(state, data) {
       return state.category = data;
+    },
+    categoriesDelete: function categoriesDelete(state, index) {
+      state.category.splice(index, 1);
     }
   }
 });

@@ -3,7 +3,6 @@
 @section('section')
 
     <div class="artist is-verified">
-
         <div class="artist__header">
             <div class="artist__navigation">
                 <ul class="nav nav-tabs" role="tablist">
@@ -17,9 +16,6 @@
                             <a href="#related-artists" aria-controls="related-artists" role="tab" data-toggle="tab">Nová kategorie</a>
                         </router-link>
                     </li>
-                    <!--<li role="presentation">
-                      <a href="#artist-about" aria-controls="artist-about" role="tab" data-toggle="tab">About</a>
-                    </li>-->
                 </ul>
             </div>
         </div>

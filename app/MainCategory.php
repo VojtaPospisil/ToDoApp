@@ -6,8 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class MainCategory extends Model
 {
-    CONST NICETOHAVE = 1;
-    CONST MUSTHAVE = 2;
+    const NICETOHAVE = 1;
+    const MUSTHAVE = 2;
 
     /**
      * The attributes that are mass assignable.

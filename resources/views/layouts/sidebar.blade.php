@@ -17,12 +17,4 @@
             Kategorie
         </a>
     </section>
-{{--    <section class="playlist">--}}
-{{--<router-link :to="`/category`">--}}
-{{--        <a href="#">--}}
-{{--            <i class="ion-ios-plus-outline"></i>--}}
-{{--            Kategorie--}}
-{{--        </a>--}}
-{{--</router-link>--}}
-{{--    </section>--}}
 </div>

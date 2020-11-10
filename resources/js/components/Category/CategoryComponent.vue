@@ -19,8 +19,8 @@
                                             <i class="ion-thumbsup"></i>
                                         </div>
                                     </div>
-                                    <div class="track" v-for="category in categories">
-                                        <div class="track__number">{{ category.id}}</div>
+                                    <div class="track" v-for="(category, index) in categories">
+                                        <div class="track__number">{{ category.id }}</div>
                                         <div class="track__title">
                                             <input type="text" name="name" @keypress.enter="updateCategory($event.target, category.id)"
                                                 required autocomplete="current-password" v-model="category.name">
@@ -30,7 +30,7 @@
                                                    required autocomplete="current-password" v-model="category.description" class="input_description">
                                         </div>
                                         <div class="track__length pr-3">
-                                            <a href="" @click.prevent="deleteCategory(category.id)">X</a>
+                                            <a href="" @click.prevent="deleteCategory(category.id, index)">X</a>
                                         </div>
                                     </div>
                                 </div>
@@ -68,8 +68,9 @@
                     }
                 });
             },
-            deleteCategory: function(id) {
-                this.$store.dispatch('deleteCategory', id)
+            deleteCategory: function(id, index) {
+                var data = {id: id, index: index}
+                this.$store.dispatch('deleteCategory', data)
                 .then((response)=>{
                     this.$store.dispatch('getAllCategory');
                 }).catch(error => {
