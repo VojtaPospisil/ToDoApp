@@ -14,4 +14,9 @@ class Category extends Model
     protected $fillable = [
         'name', 'description',
     ];
+
+    public function __set($name, $value)
+    {
+        $this->attributes[$name] = $value;
+    }
 }
