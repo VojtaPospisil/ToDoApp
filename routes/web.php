@@ -19,4 +19,11 @@ Route::get('/login', function () {
 
 Auth::routes();
 
-Route::get('/', 'HomeController@index')->name('home');
+Route::group(['middleware' => ['auth']], function () {
+    Route::get('/', 'HomeController@index')->name('home');
+    Route::get('/category', function () {
+        return view('category.category');
+    })->name('category');
+
+//    Route::resource('/category','CategoryController');
+});

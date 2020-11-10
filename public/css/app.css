@@ -10935,7 +10935,7 @@ body a:hover {
 }
 
 .header .page-flows .flow:hover {
-  color: white;
+  color: #ffffff;
 }
 
 .header .page-flows .flow .disabled {
@@ -10949,7 +10949,7 @@ body a:hover {
 .header .search input {
   border-radius: 15px;
   border: none;
-  background: white;
+  background: #ffffff;
   color: #181818;
   padding-left: 30px;
   outline: none;
@@ -10973,7 +10973,7 @@ body a:hover {
 }
 
 .header .user i:hover {
-  color: white;
+  color: #ffffff;
   cursor: pointer;
 }
 
@@ -11098,7 +11098,7 @@ body a:hover {
 }
 
 .navigation__list__item:hover {
-  color: white;
+  color: #ffffff;
   text-decoration: none;
   border-right: 3px solid #1ed760;
 }
@@ -11151,7 +11151,7 @@ body a:hover {
 }
 
 .playlist:hover a {
-  color: white;
+  color: #ffffff;
 }
 
 .playlist a {
@@ -11167,7 +11167,7 @@ body a:hover {
 
 .playlist a i {
   font-size: 24px;
-  color: white;
+  color: #ffffff;
   margin-right: 15px;
 }
 
@@ -11202,7 +11202,7 @@ body a:hover {
 }
 
 .playing__song a:hover {
-  color: white;
+  color: #ffffff;
   cursor: pointer;
 }
 
@@ -11240,7 +11240,7 @@ body a:hover {
 }
 
 .current-track__actions a:hover {
-  color: white;
+  color: #ffffff;
   cursor: pointer;
 }
 
@@ -11508,7 +11508,7 @@ body a:hover {
 }
 
 .artist__header .artist__info__name {
-  color: white;
+  color: #ffffff;
   font-size: 36px;
   font-weight: 100;
   padding: 0 0 10px 0;
@@ -11596,13 +11596,13 @@ body a:hover {
 .artist__header .artist__navigation ul li a:hover {
   background: none;
   border: none;
-  color: white;
+  color: #ffffff;
   transition: all 0.4s ease;
   border-bottom: 4px solid rgba(0, 0, 0, 0);
 }
 
 .artist__header .artist__navigation ul li.active a {
-  color: white;
+  color: #ffffff;
   background: none;
   border: none;
   border-bottom: 4px solid #1ed760;
@@ -11638,7 +11638,7 @@ body a:hover {
   position: absolute;
   bottom: 5px;
   right: 25px;
-  color: white;
+  color: #ffffff;
   background: #4688d7;
   width: 20px;
   height: 20px;
@@ -11768,7 +11768,7 @@ body a:hover {
 
 .tracks__heading__title {
   margin-left: 70px;
-  width: 45%;
+  width: 30%;
   text-transform: uppercase;
   letter-spacing: 1px;
 }
@@ -11825,9 +11825,9 @@ body a:hover {
 }
 
 .tracks .track__title {
-  width: 45%;
+  width: 30%;
   margin-left: 30px;
-  color: white;
+  color: #ffffff;
 }
 
 .tracks .track__title.featured .title:after {
@@ -11927,7 +11927,7 @@ body a:hover {
 
 .related-artists .related-artist__name {
   margin-left: 15px;
-  color: white;
+  color: #ffffff;
 }
 
 @media (max-width: 1024px) {
@@ -11980,7 +11980,7 @@ body a:hover {
 }
 
 .overview__albums__head .view-type {
-  color: white;
+  color: #ffffff;
   margin-bottom: 4px;
 }
 
@@ -12026,7 +12026,7 @@ body a:hover {
 }
 
 .album__info__meta .album__name {
-  color: white;
+  color: #ffffff;
   font-size: 30px;
   font-weight: 100;
 }
@@ -12051,10 +12051,6 @@ body a:hover {
   border-radius: 50%;
   padding: 0;
   text-align: center;
-}
-
-.album .track__title {
-  width: 70%;
 }
 
 @media (max-width: 1200px) {
@@ -12112,7 +12108,7 @@ body a:hover {
 }
 
 .media-cards .media-card__image i {
-  color: white;
+  color: #ffffff;
   font-size: 72px;
   margin: 0 auto;
   opacity: 0;
@@ -12133,7 +12129,7 @@ body a:hover {
   display: block;
   background: #282828;
   padding: 15px;
-  color: white;
+  color: #ffffff;
 }
 
 .media-cards .media-card__footer:hover {
@@ -12247,7 +12243,7 @@ button:hover {
 
 .button-dark {
   background: #1ed760;
-  color: white;
+  color: #ffffff;
   border: 1px solid #1ed760;
 }
 
@@ -12262,8 +12258,8 @@ button:hover {
 }
 
 .button-light:hover {
-  border-color: white;
-  color: white;
+  border-color: #ffffff;
+  color: #ffffff;
 }
 
 .section-title {
@@ -12272,5 +12268,55 @@ button:hover {
   letter-spacing: 1.25px;
   font-size: 13.2px;
   margin-bottom: 10px;
+}
+
+input,
+textarea {
+  font-size: 22px;
+  display: block;
+  height: 100%;
+  max-width: 500px;
+  padding: 5px 10px;
+  background: none;
+  background-image: none;
+  border: 1px solid #3d3d3d;
+  color: #ffffff;
+  border-radius: 5px;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+input:focus,
+textarea:focus {
+  outline: 0;
+  border-color: #1ab188;
+}
+
+label {
+  color: #ffffff;
+}
+
+.button-block {
+  border: 0;
+  outline: none;
+  border-radius: 5px;
+  padding: 15px 0;
+  font-size: 2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  background: #1ab188;
+  color: #ffffff;
+  display: block;
+  transition: all 0.5s ease;
+  -webkit-appearance: none;
+}
+
+.button-block:hover,
+.button-block:focus {
+  background: #179b77;
+}
+
+.input_description {
+  width: 600px;
 }
 
