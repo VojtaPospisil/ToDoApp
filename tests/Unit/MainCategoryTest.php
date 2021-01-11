@@ -3,9 +3,7 @@
 namespace Tests\Unit;
 
 use App\MainCategory;
-use App\Status;
 use App\Task;
-use App\User;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;

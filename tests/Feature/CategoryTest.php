@@ -41,14 +41,12 @@ class CategoryTest extends TestCase
 
     public function test_user_cannot_access_category()
     {
-//        $user = $this->createUser();
         $response = $this->actingAs($this->guest)->get('admin/category');
         $response->assertStatus(302);
     }
 
     public function test_create_form_category()
     {
-//        $user = $this->createUser(1);
         $response = $this->actingAs($this->admin)->get('admin/category/create');
         $response->assertStatus(200);
         $response->assertSee('form');
@@ -57,7 +55,6 @@ class CategoryTest extends TestCase
 
     public function test_create_category()
     {
-//        $user = $this->createUser(1);
         $category = factory(Category::class)->create();
         $response = $this->actingAs($this->admin)->get('admin/category');
 
@@ -67,13 +64,11 @@ class CategoryTest extends TestCase
             'name' => $category->name,
             'description' => $category->description,
             ]);
-//        $response->assertRedirect('admin/category');
         $response->assertViewIs('category.index');
     }
 
     public function test_edit_form_category()
     {
-//        $user = $this->createUser(1);
         $category = factory(Category::class)->create();
         $response = $this->actingAs($this->admin)->get('admin/category/' . $category->id . '/edit');
         $response->assertStatus(200);
@@ -85,7 +80,6 @@ class CategoryTest extends TestCase
 
     public function test_edit_category()
     {
-//        $user = $this->createUser(1);
         $category = factory(Category::class)->create();
         $response = $this->actingAs($this->admin)->post('admin/category', [
             '__token' => csrf_token(),
