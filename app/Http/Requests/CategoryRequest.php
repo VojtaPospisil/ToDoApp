@@ -2,7 +2,9 @@
 
 namespace App\Http\Requests;
 
+use App\Rules\notNumeric;
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Support\Facades\Auth;
 
 class CategoryRequest extends FormRequest
 {
@@ -13,8 +15,7 @@ class CategoryRequest extends FormRequest
      */
     public function authorize()
     {
-//        return Auth::check();
-        return true;
+        return Auth::check();
     }
 
     /**
@@ -26,13 +27,15 @@ class CategoryRequest extends FormRequest
     {
         return [
             'name'  => [
-                'required',
+                new notNumeric(),
                 'string',
+                'required',
                 'max:255',
             ],
             'description' => [
-                'required',
+                new notNumeric(),
                 'string',
+                'required',
             ]
         ];
     }

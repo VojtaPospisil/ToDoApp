@@ -12,18 +12,39 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/login', function () {
-    return view('auth.login')->name('login');
-});
+Route::view('/', 'front.index')->middleware(['auth:sanctum']);
 
 Auth::routes();
 
-Route::group(['middleware' => ['auth']], function () {
-    Route::get('/', 'HomeController@index')->name('home');
-    Route::get('/category', function () {
-        return view('category.category');
-    })->name('category');
+Route::group(['middleware' => ['admin']], function () {
+    //MainCategory
+    Route::get('admin/main_category', 'Controller@jsonMainCategory');
 
-//    Route::resource('/category','CategoryController');
+    //Status
+    Route::get('admin/status', 'Controller@jsonStatus');
+
+    Route::group(['namespace' => 'Admin'], function() {
+        Route::get('/admin', 'HomeController@index')->name('admin.home');
+
+        //Category
+        Route::resource('admin/category', 'CategoryController');
+        Route::get('admin/category/delete/{category}', 'CategoryController@destroy')->name('category.delete');
+        Route::get('admin/categories', 'CategoryController@jsonCategory');
+
+        // Task
+        Route::resource('admin/task', 'TaskController');
+        Route::get('/admin/jsonTask', 'TaskController@jsonIndex');
+        Route::get('/admin/task/{task}/{comment}', 'TaskController@show');
+
+        // Comments
+        Route::get('/admin/comments', 'CommentController@commentsJson');
+        Route::get('/admin/comment/{comment}', 'CommentController@setSeen');
+    });
+
+    // Users
+    Route::resource('admin/user', 'UserController');
+    Route::get('admin/user/delete/{user}', 'UserController@destroy')->name('user.delete');
+    Route::get('/admin/setAdmin/{user}', 'UserController@setAdmin')->name('user.setAdmin');
+    Route::get('/admin/users', 'UserController@jsonUsers');
+    Route::get('admin/user/search/{search}', 'UserController@search');
 });

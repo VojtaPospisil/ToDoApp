@@ -8,6 +8,11 @@ require('./bootstrap');
 
 window.Vue = require('vue');
 window.Form = Form;
+import $ from 'jquery';
+window.$ = window.jquery = $;
+
+// window.axios = require('axios');
+// axios.defaults.headers.common["Authorization"] = "Bearer" + localStorage.getItem('authToken');
 
 /**
  * The following block of code may be used to automatically register your
@@ -21,26 +26,28 @@ window.Form = Form;
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
-import Router from './router.js';
-import storeData from './store/index';
-import Form from './form';
-import Vuex from 'vuex';
+Vue.component('searchbar-component', require('./components/Admin/formUserSearchBar').default);
+Vue.component('pagination-component', require('./components/Admin/Helper/Pagination/PaginationComponent').default);
+Vue.component('task-component', require('./components/Admin/Task/TaskComponent').default);
+Vue.component('createtask-component', require('./components/Admin/Task/CreateTaskComponent').default);
+Vue.component('comments-component', require('./components/Admin/Home/CommentComponent').default);
 
-const store = new Vuex.Store(
-    storeData
-)
+import Router from './router.js';
+import store from './store/index';
+import Form from './form';
+
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
-
 const app = new Vue({
     el: '#app',
     router: Router,
     store
 });
 
+$(document).ready(function() {
 // AUTH FORM --- START ---
     $('.form').find('input, textarea').on('keyup blur focus', function (e) {
 
@@ -54,17 +61,16 @@ const app = new Vue({
                 label.addClass('active highlight');
             }
         } else if (e.type === 'blur') {
-            if( $this.val() === '' ) {
+            if ($this.val() === '') {
                 label.removeClass('active highlight');
             } else {
                 label.removeClass('highlight');
             }
         } else if (e.type === 'focus') {
 
-            if( $this.val() === '' ) {
+            if ($this.val() === '') {
                 label.removeClass('highlight');
-            }
-            else if( $this.val() !== '' ) {
+            } else if ($this.val() !== '') {
                 label.addClass('highlight');
             }
         }
@@ -72,12 +78,15 @@ const app = new Vue({
     });
 
     $('.tab a').on('click', function (e) {
+        console.log('form');
         e.preventDefault();
         $(this).parent().addClass('active');
         $(this).parent().siblings().removeClass('active');
-        target = $(this).attr('href');
+        console.log($(this).attr('href'));
+        var target = $(this).attr('href');
         $('.tab-content > div').not(target).hide();
         $(target).fadeIn(600);
     });
 // AUTH FORM --- END ---
 
+});

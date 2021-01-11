@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Nunito);@charset "UTF-8";
+@charset "UTF-8";
 
 /*!
  * Bootstrap v4.5.3 (https://getbootstrap.com/)
@@ -12270,11 +12270,10 @@ button:hover {
   margin-bottom: 10px;
 }
 
-input,
-textarea {
+.form_input {
   font-size: 22px;
   display: block;
-  height: 100%;
+  height: auto;
   max-width: 500px;
   padding: 5px 10px;
   background: none;
@@ -12285,8 +12284,7 @@ textarea {
   transition: border-color 0.25s ease, box-shadow 0.25s ease;
 }
 
-input:focus,
-textarea:focus {
+.form_input:focus {
   outline: 0;
   border-color: #1ab188;
 }
@@ -12318,5 +12316,93 @@ label {
 
 .input_description {
   width: 600px;
+}
+
+.row {
+  margin-top: 40px;
+  padding: 0 10px;
+  border: 2px solid #1dc799;
+  border-radius: 6px;
+}
+
+.planned {
+  background-color: darkcyan;
+}
+
+.unfinished {
+  background-color: indianred;
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+.panel-heading {
+  border-bottom: 6px solid #1dc799;
+}
+
+.panel-heading div {
+  margin-top: -18px;
+  font-size: 15px;
+}
+
+.panel-heading div span {
+  margin-left: 5px;
+}
+
+.panel-body {
+  display: none;
+}
+
+.table {
+  color: #ffffff;
+}
+
+.admin {
+  background-color: red;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown_content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown_content_display {
+  display: block;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown_content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.task_input {
+  display: block;
+  height: auto;
+  background: none;
+  border: 1px solid #3d3d3d;
+  color: #ffffff;
+  border-radius: 5px;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.comment {
+  border: 1px solid black;
 }
 

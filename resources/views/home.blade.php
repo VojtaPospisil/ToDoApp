@@ -6,6 +6,7 @@
         @include('layouts/sidebar')
 
         <div class="content__middle">
+            <router-view></router-view>
                 @yield('section')
         </div>
     </section>

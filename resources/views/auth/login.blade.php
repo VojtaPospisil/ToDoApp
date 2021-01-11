@@ -41,7 +41,7 @@
                         <!-- Authentication Links -->
                         @guest
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                                <a class="nav-link" href="{{ route('admin.login') }}">{{ __('Login') }}</a>
                             </li>
                             @if (Route::has('register'))
                                 <li class="nav-item">
@@ -80,7 +80,7 @@
                 </ul>
                 <div class="tab-content">
                     <div id="login">
-                        <form action="{{ route('login') }}" method="post">
+                        <form action="{{ route('admin.login') }}" method="post">
                             @csrf
                             <div class="field-wrap">
                                 <label>
