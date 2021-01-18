@@ -14,7 +14,8 @@ class CategoryService
     public function updateOrCreateCategory(CategoryRequest $request)
     {
         Category::updateOrCreate(
-            ['id' => $request->id], [
+            ['id' => $request->id],
+            [
                 'name' => $request->name,
                 'description' => $request->description
             ]

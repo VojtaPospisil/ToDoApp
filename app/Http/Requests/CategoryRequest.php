@@ -2,7 +2,7 @@
 
 namespace App\Http\Requests;
 
-use App\Rules\notNumeric;
+use App\Rules\NotNumeric;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Support\Facades\Auth;
 
@@ -27,13 +27,13 @@ class CategoryRequest extends FormRequest
     {
         return [
             'name'  => [
-                new notNumeric(),
+                new NotNumeric(),
                 'string',
                 'required',
                 'max:255',
             ],
             'description' => [
-                new notNumeric(),
+                new NotNumeric(),
                 'string',
                 'required',
             ]

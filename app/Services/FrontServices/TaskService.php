@@ -1,8 +1,6 @@
 <?php
 
-
 namespace App\Services\FrontServices;
-
 
 use App\Http\Resources\TaskResource;
 use App\Status;

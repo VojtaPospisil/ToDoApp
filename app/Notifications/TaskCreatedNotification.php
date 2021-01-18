@@ -38,7 +38,7 @@ class TaskCreatedNotification extends Notification
      */
     public function toMail($notifiable)
     {
-        return (new MailMessage)
+        return (new MailMessage())
                     ->view('admin.task.mailTaskCreated', ['task' => $this->task])
                     ->subject('New Task Notification')
                     ->from($this->task->userCreated()->first()->email);

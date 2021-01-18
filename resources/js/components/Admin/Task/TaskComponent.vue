@@ -83,7 +83,7 @@
                                             <tr v-for="(task, index) in tasks">
                                                 <td><a @click.prevent="taskDetail(task.id)" prevent.default href="">{{task.id}}</a></td>
                                                 <td>
-                                                    <input :readonly="task.status.id !== 1"
+                                                    <input :readonly="task.status_id !== 1"
                                                         class="task_input" type="text" name="title"
                                                         @keypress.enter="updateTasks($event.target, task.id)"
                                                         required v-model="task.title">
@@ -98,7 +98,7 @@
                                                     <select
                                                         type="text" class="task_input"
                                                         @input="updateTasks($event.target, task.id)"
-                                                        :readonly="task.status.id !== 1"
+                                                        :readonly="task.status_id !== 1"
                                                         name="main_category" value=""
                                                         required autocomplete="off"
                                                         autofocus>
@@ -113,7 +113,7 @@
                                                 <td>
                                                     <select type="text" class="task_input"
                                                             @input="updateTasks($event.target, task.id)"
-                                                            :readonly="task.status.id !== 1"
+                                                            :readonly="task.status_id !== 1"
                                                             name="category" required autocomplete="off" autofocus>
                                                         <option v-for="category in categories"
                                                                 :selected="task.category_id === category.id"
@@ -124,15 +124,15 @@
                                                 </td>
                                                 <td>
                                                     <input
-                                                        class="task_input" type="date" name="due_date" :readonly="task.status.id !== 1 || 4"
+                                                        class="task_input" type="date" name="due_date" :readonly="task.status_id !== 1 || 4"
                                                         @keypress.enter="updateTasks($event.target, task.id)"
                                                         required autocomplete="current-password" v-model="task.due_date"
                                                     >
                                                 </td>
-                                                <td>{{ task.status.name }}</td>
+                                                <td>{{ task.status_name }}</td>
                                                 <td>
                                                     <div class="dropdown">
-                                                    <input type="text" @input="loadUsers($event.target)" v-model="task.user_assigned.name"
+                                                    <input type="text" @input="loadUsers($event.target)" v-model="task.user_assigned_name"
                                                            required autocomplete="off" autofocus class="task_input">
                                                         <div class="dropdown_content">
                                                             <div v-for="user in users">
@@ -142,7 +142,7 @@
                                                     </div>
                                                 </td>
                                                 <td>{{ task.created_at }}</td>
-                                                <td>{{ task.user_created.name }}</td>
+                                                <td>{{ task.user_created_name }}</td>
                                                 <td class="col-md-2">
                                                     <div class="btn-group" role="group">
                                                         <a class="btn btn-default" @click.prevent="deleteTask(task)" href="#">X</a>

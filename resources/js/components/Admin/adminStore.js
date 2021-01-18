@@ -48,7 +48,8 @@ import routes from "../../router";
                 params: data
             }).then((response)=>{
                 const{data, ...pagination} = response.data;
-                    context.commit('SET_PAGINATION', pagination)
+                console.log(response.data);
+                context.commit('SET_PAGINATION', pagination)
                     context.commit('GET_TASK', data)
                 }).catch((error)=>{
                     console.log('Error', error)

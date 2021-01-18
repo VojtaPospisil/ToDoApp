@@ -79,14 +79,9 @@ class TaskController extends Controller
     {
         abort_if(Gate::denies('is_admin', auth()->user()), Response::HTTP_FORBIDDEN, '403 Forbidden');
 
-        $taskDetails = $this->taskService->getTaskDetails($id, $commentId);
+        $task = $this->taskService->getTaskDetails($id);
 
-//        return view('admin.task.detail', compact('task', 'comment'));
-        return view('admin.task.detail')
-            ->with([
-                'task' => $taskDetails['task'],
-                'comment' => $taskDetails['comment']
-            ]);
+        return view('admin.task.detail', compact('task', 'commentId'));
     }
 
 

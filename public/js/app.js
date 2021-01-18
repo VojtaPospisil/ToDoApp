@@ -40615,7 +40615,7 @@ var render = function() {
                                 ],
                                 staticClass: "task_input",
                                 attrs: {
-                                  readonly: task.status.id !== 1,
+                                  readonly: task.status_id !== 1,
                                   type: "text",
                                   name: "title",
                                   required: ""
@@ -40707,7 +40707,7 @@ var render = function() {
                                   staticClass: "task_input",
                                   attrs: {
                                     type: "text",
-                                    readonly: task.status.id !== 1,
+                                    readonly: task.status_id !== 1,
                                     name: "main_category",
                                     value: "",
                                     required: "",
@@ -40756,7 +40756,7 @@ var render = function() {
                                   staticClass: "task_input",
                                   attrs: {
                                     type: "text",
-                                    readonly: task.status.id !== 1,
+                                    readonly: task.status_id !== 1,
                                     name: "category",
                                     required: "",
                                     autocomplete: "off",
@@ -40808,7 +40808,7 @@ var render = function() {
                                 attrs: {
                                   type: "date",
                                   name: "due_date",
-                                  readonly: task.status.id !== 1 || 4,
+                                  readonly: task.status_id !== 1 || 4,
                                   required: "",
                                   autocomplete: "current-password"
                                 },
@@ -40846,7 +40846,7 @@ var render = function() {
                               })
                             ]),
                             _vm._v(" "),
-                            _c("td", [_vm._v(_vm._s(task.status.name))]),
+                            _c("td", [_vm._v(_vm._s(task.status_name))]),
                             _vm._v(" "),
                             _c("td", [
                               _c("div", { staticClass: "dropdown" }, [
@@ -40855,8 +40855,8 @@ var render = function() {
                                     {
                                       name: "model",
                                       rawName: "v-model",
-                                      value: task.user_assigned.name,
-                                      expression: "task.user_assigned.name"
+                                      value: task.user_assigned_name,
+                                      expression: "task.user_assigned_name"
                                     }
                                   ],
                                   staticClass: "task_input",
@@ -40866,7 +40866,7 @@ var render = function() {
                                     autocomplete: "off",
                                     autofocus: ""
                                   },
-                                  domProps: { value: task.user_assigned.name },
+                                  domProps: { value: task.user_assigned_name },
                                   on: {
                                     input: [
                                       function($event) {
@@ -40874,8 +40874,8 @@ var render = function() {
                                           return
                                         }
                                         _vm.$set(
-                                          task.user_assigned,
-                                          "name",
+                                          task,
+                                          "user_assigned_name",
                                           $event.target.value
                                         )
                                       },
@@ -40916,7 +40916,7 @@ var render = function() {
                             _vm._v(" "),
                             _c("td", [_vm._v(_vm._s(task.created_at))]),
                             _vm._v(" "),
-                            _c("td", [_vm._v(_vm._s(task.user_created.name))]),
+                            _c("td", [_vm._v(_vm._s(task.user_created_name))]),
                             _vm._v(" "),
                             _c("td", { staticClass: "col-md-2" }, [
                               _c(
@@ -59839,6 +59839,7 @@ var actions = {
           data = _response$data.data,
           pagination = _objectWithoutProperties(_response$data, ["data"]);
 
+      console.log(response.data);
       context.commit('SET_PAGINATION', pagination);
       context.commit('GET_TASK', data);
     })["catch"](function (error) {

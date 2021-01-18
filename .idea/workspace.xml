@@ -3,12 +3,23 @@
   <component name="ChangeListManager">
     <list default="true" id="cd7ef32a-d944-4830-97e7-2b1cfef47a1d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Feature/CategoryTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/CategoryTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Feature/ExampleTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/ExampleTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Feature/TaskTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/TaskTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Unit/CategoryTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Unit/CategoryTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Unit/MainCategoryTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Unit/MainCategoryTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Unit/TaskTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Unit/TaskTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Comment.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Comment.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Helpers/Helper.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Helpers/Helper.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/CommentController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/CommentController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/TaskController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/TaskController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/CategoryRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/CategoryRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Notifications/TaskCreatedNotification.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Notifications/TaskCreatedNotification.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Repository/Admin/TaskRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repository/Admin/TaskRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Rules/notNumeric.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Rules/NotNumeric.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Services/AdminServices/CategoryService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/AdminServices/CategoryService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Services/AdminServices/TaskService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/AdminServices/TaskService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Services/FrontServices/TaskService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/FrontServices/TaskService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/Admin/Task/TaskComponent.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Admin/Task/TaskComponent.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/Admin/adminStore.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Admin/adminStore.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/sass/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/app.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/Admin/Task/detail.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Admin/Task/detail.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -166,6 +177,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/tests/Feature" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="settings.github" />
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
   </component>
   <component name="RecentsManager">
@@ -604,7 +616,31 @@
       <workItem from="1610137501793" duration="974000" />
       <workItem from="1610139403849" duration="322000" />
       <workItem from="1610367708031" duration="795000" />
-      <workItem from="1610380919740" duration="880000" />
+      <workItem from="1610380919740" duration="1102000" />
+      <workItem from="1610398409699" duration="255000" />
+      <workItem from="1610630669475" duration="797000" />
+      <workItem from="1610652303130" duration="595000" />
+      <workItem from="1610654085306" duration="575000" />
+      <workItem from="1610655909574" duration="597000" />
+      <workItem from="1610657822198" duration="598000" />
+      <workItem from="1610662302674" duration="580000" />
+      <workItem from="1610664617135" duration="571000" />
+      <workItem from="1610695243060" duration="596000" />
+      <workItem from="1610697088155" duration="598000" />
+      <workItem from="1610698921137" duration="582000" />
+      <workItem from="1610700785098" duration="566000" />
+      <workItem from="1610818440657" duration="865000" />
+      <workItem from="1610820952774" duration="670000" />
+      <workItem from="1610822832663" duration="2137000" />
+      <workItem from="1610980673635" duration="1773000" />
+      <workItem from="1610982797855" duration="1457000" />
+      <workItem from="1610992391637" duration="753000" />
+      <workItem from="1610997152915" duration="1747000" />
+      <workItem from="1610999013359" duration="1841000" />
+      <workItem from="1611001041371" duration="1523000" />
+      <workItem from="1611002870178" duration="1792000" />
+      <workItem from="1611004800927" duration="1795000" />
+      <workItem from="1611006692121" duration="430000" />
     </task>
     <servers />
   </component>
@@ -612,12 +648,16 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="184" y="112" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1610630787215">
+      <screen x="0" y="0" width="1440" height="855" />
+    </state>
+    <state x="184" y="112" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1440.855@0.0.1440.855" timestamp="1610630787215" />
     <state x="525" y="142" key="#com.intellij.ide.util.MemberChooser" timestamp="1606145907440">
       <screen x="0" y="0" width="1440" height="853" />
     </state>
     <state x="525" y="142" key="#com.intellij.ide.util.MemberChooser/0.0.1440.853@0.0.1440.853" timestamp="1606145907440" />
-    <state x="458" y="212" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1610117433919">
-      <screen x="0" y="0" width="1440" height="852" />
+    <state x="458" y="212" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1610982017261">
+      <screen x="0" y="0" width="1440" height="856" />
     </state>
     <state x="458" y="212" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/-1600.0.1600.900/0.0.1440.854@0.0.1440.854" timestamp="1606415212718" />
     <state x="458" y="212" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/-1600.0.1600.900/0.0.1440.855@0.0.1440.855" timestamp="1605080059404" />
@@ -628,7 +668,7 @@
     <state x="458" y="212" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1440.853@0.0.1440.853" timestamp="1610021856634" />
     <state x="458" y="212" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1440.854@0.0.1440.854" timestamp="1606242585699" />
     <state x="458" y="212" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1440.855@0.0.1440.855" timestamp="1608291608263" />
-    <state x="458" y="212" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1440.856@0.0.1440.856" timestamp="1608497539698" />
+    <state x="458" y="212" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1440.856@0.0.1440.856" timestamp="1610982017261" />
     <state x="458" y="213" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1440.857@0.0.1440.857" timestamp="1606563473291" />
     <state x="458" y="229" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.22.1440.832@0.22.1440.832" timestamp="1609961202074" />
     <state x="305" y="235" key="EditFileWatcherDialog" timestamp="1604668352028">
@@ -658,6 +698,10 @@
     <state x="402" y="272" key="NewPhpClassDialog/0.0.1440.851@0.0.1440.851" timestamp="1608758643033" />
     <state x="402" y="273" key="NewPhpClassDialog/0.0.1440.853@0.0.1440.853" timestamp="1607704439415" />
     <state x="402" y="273" key="NewPhpClassDialog/0.0.1440.854@0.0.1440.854" timestamp="1606239642653" />
+    <state x="229" y="89" key="SettingsEditor" timestamp="1610630927743">
+      <screen x="0" y="0" width="1440" height="855" />
+    </state>
+    <state x="229" y="89" key="SettingsEditor/0.0.1440.855@0.0.1440.855" timestamp="1610630927743" />
     <state x="100" y="0" width="1240" height="797" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1609702210557">
       <screen x="0" y="0" width="1440" height="848" />
     </state>
@@ -683,8 +727,8 @@
     <state x="100" y="59" width="1240" height="737" key="com.intellij.history.integration.ui.views.SelectionHistoryDialog/0.22.1440.829@0.22.1440.829" timestamp="1607339080268" />
     <state x="100" y="100" width="1240" height="700" key="com.intellij.history.integration.ui.views.SelectionHistoryDialog/0.22.1440.831@0.22.1440.831" timestamp="1607773955747" />
     <state x="100" y="80" width="1240" height="721" key="com.intellij.history.integration.ui.views.SelectionHistoryDialog/0.22.1440.833@0.22.1440.833" timestamp="1607955076709" />
-    <state x="386" y="206" width="667" height="487" key="find.popup" timestamp="1610020262865">
-      <screen x="0" y="0" width="1440" height="853" />
+    <state x="386" y="207" width="667" height="489" key="find.popup" timestamp="1610981466787">
+      <screen x="0" y="0" width="1440" height="856" />
     </state>
     <state x="386" y="206" width="667" height="492" key="find.popup/-1600.0.1600.900/0.0.1440.853@0.0.1440.853" timestamp="1606386665701" />
     <state x="386" y="206" width="667" height="493" key="find.popup/-1600.0.1600.900/0.0.1440.855@0.0.1440.855" timestamp="1606666723356" />
@@ -701,7 +745,7 @@
     <state x="386" y="206" width="667" height="487" key="find.popup/0.0.1440.853@0.0.1440.853" timestamp="1610020262865" />
     <state x="386" y="206" width="667" height="492" key="find.popup/0.0.1440.854@0.0.1440.854" timestamp="1606240075704" />
     <state x="386" y="207" width="667" height="486" key="find.popup/0.0.1440.855@0.0.1440.855" timestamp="1608466575406" />
-    <state x="386" y="207" width="667" height="489" key="find.popup/0.0.1440.856@0.0.1440.856" timestamp="1608476233766" />
+    <state x="386" y="207" width="667" height="489" key="find.popup/0.0.1440.856@0.0.1440.856" timestamp="1610981466787" />
     <state x="386" y="207" width="667" height="488" key="find.popup/0.0.1440.857@0.0.1440.857" timestamp="1608501132513" />
     <state x="386" y="222" width="667" height="486" key="find.popup/0.22.1440.826@0.22.1440.826" timestamp="1609521021863" />
     <state x="473" y="305" key="git4idea.ui.GitUnstashDialog" timestamp="1604843314605">
@@ -712,8 +756,8 @@
       <screen x="0" y="0" width="1440" height="855" />
     </state>
     <state width="600" height="424" key="javadoc.popup/0.0.1440.855@0.0.1440.855" timestamp="1604671122059" />
-    <state x="385" y="179" width="670" height="677" key="search.everywhere.popup" timestamp="1610367899973">
-      <screen x="0" y="0" width="1440" height="854" />
+    <state x="385" y="179" width="670" height="677" key="search.everywhere.popup" timestamp="1611005628700">
+      <screen x="0" y="0" width="1440" height="856" />
     </state>
     <state x="385" y="177" width="670" height="670" key="search.everywhere.popup/-1600.0.1600.900/0.0.1440.847@0.0.1440.847" timestamp="1605095310197" />
     <state x="385" y="179" width="670" height="677" key="search.everywhere.popup/-1600.0.1600.900/0.0.1440.853@0.0.1440.853" timestamp="1609943251841" />
@@ -728,13 +772,14 @@
     <state x="385" y="178" width="670" height="677" key="search.everywhere.popup/0.0.1440.852@0.0.1440.852" timestamp="1607681331619" />
     <state x="385" y="179" width="670" height="677" key="search.everywhere.popup/0.0.1440.853@0.0.1440.853" timestamp="1610020891014" />
     <state x="385" y="179" width="670" height="677" key="search.everywhere.popup/0.0.1440.854@0.0.1440.854" timestamp="1610367899973" />
-    <state x="385" y="179" width="670" height="158" key="search.everywhere.popup/0.0.1440.855@0.0.1440.855" timestamp="1608474344295" />
-    <state x="385" y="179" width="670" height="677" key="search.everywhere.popup/0.0.1440.856@0.0.1440.856" timestamp="1608488543218" />
+    <state x="385" y="179" width="670" height="358" key="search.everywhere.popup/0.0.1440.855@0.0.1440.855" timestamp="1610981114977" />
+    <state x="385" y="179" width="670" height="677" key="search.everywhere.popup/0.0.1440.856@0.0.1440.856" timestamp="1611005628700" />
     <state x="385" y="179" width="670" height="678" key="search.everywhere.popup/0.0.1440.857@0.0.1440.857" timestamp="1606564911343" />
     <state x="385" y="180" width="670" height="680" key="search.everywhere.popup/0.0.1440.859@0.0.1440.859" timestamp="1605818836913" />
     <state x="385" y="178" width="670" height="673" key="search.everywhere.popup/0.22.1440.826@0.22.1440.826" timestamp="1609182982818" />
     <state x="385" y="178" width="670" height="675" key="search.everywhere.popup/0.22.1440.828@0.22.1440.828" timestamp="1607352288824" />
     <state x="385" y="179" width="670" height="677" key="search.everywhere.popup/0.22.1440.832@0.22.1440.832" timestamp="1606242939663" />
+    <state x="385" y="179" width="670" height="158" key="search.everywhere.popup/0.22.1440.833@0.22.1440.833" timestamp="1610398427580" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -746,7 +791,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/resources/views/Admin/Task/detail.blade.php</url>
-          <line>34</line>
+          <line>37</line>
           <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>

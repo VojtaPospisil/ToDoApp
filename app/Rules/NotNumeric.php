@@ -4,7 +4,7 @@ namespace App\Rules;
 
 use Illuminate\Contracts\Validation\Rule;
 
-class notNumeric implements Rule
+class NotNumeric implements Rule
 {
     /**
      * Create a new rule instance.
@@ -13,7 +13,6 @@ class notNumeric implements Rule
      */
     public function __construct()
     {
-
     }
 
     /**

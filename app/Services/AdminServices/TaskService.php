@@ -60,13 +60,7 @@ class TaskService
                 throw new \Exception($exception->getMessage());
             }
         } else {
-            $tasks = Task::with([
-                'userCreated:id,name',
-                'status:id,name',
-                'userAssigned:id,name',
-                'category:id,name',
-                'mainCategory:id,name'
-            ])->paginate(5);
+            $tasks = $this->taskRepository->getTaskQueryWithRelationships()->paginate(5);
         }
 
         return $tasks;
@@ -77,9 +71,6 @@ class TaskService
         try {
             $task = new Task();
             $task->fill($request->only('title', 'description', 'due_date'));
-//            $task->title = $request->title;
-//            $task->description = $request->description;
-//            $task->due_date = $request->due_date;
             $task->mainCategory()->associate(MainCategory::findOrFail($request->main_category));
             $task->userAssigned()->associate(User::findOrFail($request->user_id));
             $task->userCreated()->associate($request->user());
@@ -95,30 +86,17 @@ class TaskService
 
     /**
      * @param int $id
-     * @param int|null $commentId
-     * @return array
+     * @return \Illuminate\Database\Eloquent\Builder|\Illuminate\Database\Eloquent\Builder[]|\Illuminate\Database\Eloquent\Collection|\Illuminate\Database\Eloquent\Model
      */
-    public function getTaskDetails(int $id, int $commentId = null)
+    public function getTaskDetails(int $id)
     {
-        $taskDetails = array();
-
-        $taskDetails['task'] = Task::with(
-            'userCreated:id,name',
-            'status:id,name',
-            'userAssigned:id,name',
-            'category:id,name',
-            'mainCategory:id,name',
-            'comment')
+        return $this->taskRepository->getTaskQueryWithRelationships()
+            ->with('comment')
             ->findOrFail($id);
-
-        $taskDetails['comment'] = $commentId !== null ?? Comment::findOrFail($commentId);
-
-        return $taskDetails;
     }
 
     public function updateTask(Request $request, Task $task)
     {
-        dd($request);
         $attributesArray = array("title", "description");
         $attribute = $request->attribute;
         $value = $request->newValue;
@@ -126,15 +104,11 @@ class TaskService
         try {
             if (in_array($attribute, $attributesArray)) {
                 $task->fill($request->all());
-//                $task->save();
-//                $task->__set($attribute, $value);
-//                $task->save();
             } else {
                 switch ($request->attribute) {
                     case 'main_category':
                         $mainCategory = MainCategory::findOrFail((int) $value);
                         $task->mainCategory()->associate($mainCategory);
-//                        $task->save();
                         break;
                     case 'category':
                         $category = Category::findOrFail((int) $value);

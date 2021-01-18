@@ -23,7 +23,8 @@ class CommentController extends Controller
      * @param Comment $comment
      * @return \Illuminate\Contracts\Routing\ResponseFactory|\Illuminate\Http\Response
      */
-    public function setSeen(Comment $comment) {
+    public function setSeen(Comment $comment)
+    {
         $comment->setSeen();
         $comment->save();
 

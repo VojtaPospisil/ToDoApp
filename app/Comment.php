@@ -41,15 +41,18 @@ class Comment extends Model
         return $this->belongsTo('App\Task', 'task_id', 'id');
     }
 
-    public function setSeen() {
+    public function setSeen()
+    {
         $this->seen = true;
     }
 
-    public function parent() {
+    public function parent()
+    {
         return $this->belongsTo('App\Comment', 'parent_id');
     }
 
-    public function child() {
+    public function child()
+    {
         return $this->hasMany('App\Comment', 'parent_id', 'id');
     }
 

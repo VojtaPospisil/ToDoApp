@@ -12406,3 +12406,7 @@ label {
   border: 1px solid black;
 }
 
+.comment_targeted {
+  border: 1px solid red;
+}
+
